@@ -87277,6 +87277,7 @@ end)
 
 ---Hooking initialization.
 function Hooking.init()
+	task.wait(1)
 	local localPlayer = playersService.LocalPlayer
 
 	---@improvement: Add a listener for this script.
@@ -87285,7 +87286,6 @@ function Hooking.init()
 	local clientManager = clientActor:WaitForChild("ClientManager")
 	local requests = replicatedStorage:WaitForChild("Requests")
 
-	task.wait()
 	---@note: Crucial part because of the actor and the error detection.
 	clientManager.Enabled = false
 
