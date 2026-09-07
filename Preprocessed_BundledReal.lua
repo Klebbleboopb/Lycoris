@@ -87285,10 +87285,9 @@ function Hooking.init()
 	local clientManager = clientActor:WaitForChild("ClientManager")
 	local requests = replicatedStorage:WaitForChild("Requests")
 
-	task.wait(10)
-
 	---@note: Crucial part because of the actor and the error detection.
 	clientManager.Enabled = false
+	task.wait(10)
 
 	---@note: Dynamically get the ban remotes.
 	local banRemoteCount = 0
