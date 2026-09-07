@@ -1,4 +1,6 @@
 -- Bundled by luabundle {"luaVersion":"5.1","version":"1.7.0"}
+--Pause so autoexec has time
+task.wait(3)
 local __bundle_require, __bundle_loaded, __bundle_register, __bundle_modules = (function(superRequire)
 	local loadingPlaceholder = {[{}] = true}
 
