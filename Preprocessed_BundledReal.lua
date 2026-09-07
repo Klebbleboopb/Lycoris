@@ -87284,13 +87284,12 @@ function Hooking.init()
 	local clientActor = playerScripts:WaitForChild("ClientActor")
 	local clientManager = clientActor:WaitForChild("ClientManager")
 	local requests = replicatedStorage:WaitForChild("Requests")
-
+	task.wait(0.5)
 	---@note: Crucial part because of the actor and the error detection.
 	clientManager.Enabled = false
 
 	---@note: Dynamically get the ban remotes.
 	local banRemoteCount = 0
-	task.wait(1)
 	for _, request in next, requests:GetChildren() do
 		local hasChangedConnection = #getconnections(request.Changed)
 		if hasChangedConnection <= 0 then
