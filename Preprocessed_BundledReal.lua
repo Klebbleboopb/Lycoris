@@ -87287,7 +87287,7 @@ function Hooking.init()
   
 	task.wait(1)
 	---@note: Crucial part because of the actor and the error detection.
-	clientManager.Enabled = true
+	clientManager.Enabled = false
 
 	---@note: Dynamically get the ban remotes.
 	local banRemoteCount = 0
@@ -87303,7 +87303,7 @@ function Hooking.init()
 	end
 
 	-- Did we execute with a standalone AC bypass?
-	task.wait(3)
+	task.wait(1)
 
 	local nulledBanRemotes = {}
 
