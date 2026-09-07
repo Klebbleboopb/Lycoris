@@ -87294,7 +87294,7 @@ function Hooking.init()
 
 	---@note: Crucial part because of the actor and the error detection.
 	clientManager.Enabled = false
-	task.wait(10)
+	task.wait(5)
 
 	---@note: Dynamically get the ban remotes.
 	local banRemoteCount = 0
