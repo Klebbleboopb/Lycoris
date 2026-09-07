@@ -87277,6 +87277,8 @@ end)
 
 ---Hooking initialization.
 function Hooking.init()
+	local character = player.Character or player.CharacterAdded:Wait()
+	
 	local localPlayer = playersService.LocalPlayer
 
 	---@improvement: Add a listener for this script.
