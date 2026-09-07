@@ -1,6 +1,4 @@
 -- Bundled by luabundle {"luaVersion":"5.1","version":"1.7.0"}
---Pause so autoexec has time
-task.wait(3)
 local __bundle_require, __bundle_loaded, __bundle_register, __bundle_modules = (function(superRequire)
 	local loadingPlaceholder = {[{}] = true}
 
@@ -87287,6 +87285,7 @@ function Hooking.init()
 	local clientManager = clientActor:WaitForChild("ClientManager")
 	local requests = replicatedStorage:WaitForChild("Requests")
 
+	task.wait(3)
 	---@note: Crucial part because of the actor and the error detection.
 	clientManager.Enabled = false
 
@@ -87298,7 +87297,7 @@ function Hooking.init()
 		if hasChangedConnection <= 0 then
 			continue
 		end
-
+  task.wait(1)
 		banRemoteCount = banRemoteCount + 1
 		banRemotes[request] = true
 	end
