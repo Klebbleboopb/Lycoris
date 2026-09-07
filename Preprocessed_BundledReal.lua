@@ -87302,6 +87302,8 @@ function Hooking.init()
 	end
 
 	-- Did we execute with a standalone AC bypass?
+	task.wait(3)
+
 	local nulledBanRemotes = {}
 
 	for _, instance in next, getnilinstances() do
