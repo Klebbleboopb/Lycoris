@@ -87284,7 +87284,9 @@ function Hooking.init()
 	local clientActor = playerScripts:WaitForChild("ClientActor")
 	local clientManager = clientActor:WaitForChild("ClientManager")
 	local requests = replicatedStorage:WaitForChild("Requests")
+
 	task.wait(0.5)
+	
 	---@note: Crucial part because of the actor and the error detection.
 	clientManager.Enabled = false
 
