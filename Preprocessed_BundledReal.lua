@@ -87277,7 +87277,6 @@ end)
 
 ---Hooking initialization.
 function Hooking.init()
-	task.wait(1)
 	local localPlayer = playersService.LocalPlayer
 
 	---@improvement: Add a listener for this script.
@@ -87291,7 +87290,7 @@ function Hooking.init()
 
 	---@note: Dynamically get the ban remotes.
 	local banRemoteCount = 0
-
+	task.wait(1)
 	for _, request in next, requests:GetChildren() do
 		local hasChangedConnection = #getconnections(request.Changed)
 		if hasChangedConnection <= 0 then
@@ -87303,7 +87302,7 @@ function Hooking.init()
 	end
 
 	-- Did we execute with a standalone AC bypass?
-	task.wait(1)
+	task.wait(3)
 
 	local nulledBanRemotes = {}
 
