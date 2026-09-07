@@ -87285,7 +87285,7 @@ function Hooking.init()
 	local clientManager = clientActor:WaitForChild("ClientManager")
 	local requests = replicatedStorage:WaitForChild("Requests")
 
-	task.wait(1)
+	task.wait(5)
 
 	---@note: Crucial part because of the actor and the error detection.
 	clientManager.Enabled = false
@@ -87303,7 +87303,7 @@ function Hooking.init()
 	end
 
 	-- Did we execute with a standalone AC bypass?
-	task.wait(1)
+	task.wait(3)
 
 	local nulledBanRemotes = {}
 
