@@ -87277,10 +87277,15 @@ end)
 
 ---Hooking initialization.
 function Hooking.init()
-	local character = player.Character or player.CharacterAdded:Wait()
-	
 	local localPlayer = playersService.LocalPlayer
 
+
+	-- continue after player has actually spawned.
+	local character = localPlayer.Character
+	if not character then 
+		character = localPlayer.CharacterAdded:Wait()
+	end
+	
 	---@improvement: Add a listener for this script.
 	local playerScripts = localPlayer:WaitForChild("PlayerScripts")
 	local clientActor = playerScripts:WaitForChild("ClientActor")
